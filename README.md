@@ -8,10 +8,10 @@ Our mission? Turn messy, multi-million-rows of data into a machine learning pipe
 
 ## Our Team
 
-- **[Amina Jobarteh]** — _Data Scientist_
-- **[Ye(Morris) Ou ]** — _Data Scientist_
-- **[Oluwafikunayomi Adeniji]** — _Data Scientist_
-- **[Leomary Rodriguez]** — _Data Scientist_
+- **Amina Jobarteh** — _Data Scientist_
+- **Ye(Morris) Ou** — _Data Scientist_
+- **Oluwafikunayomi Adeniji** — _Data Scientist_
+- **Leomary Rodriguez** — _Data Scientist_
 
 ---
 
