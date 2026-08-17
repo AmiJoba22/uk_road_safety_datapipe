@@ -51,8 +51,8 @@ We split the extensive [UK Road Safety Dataset](https://www.kaggle.com/datasets/
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/[YOUR_ORGS_NAME]/[YOUR_REPO_NAME].git
-cd [YOUR_REPO_NAME]
+git clone https://github.com/AmiJoba22/uk_road_safety_datapipe].git
+cd [uk_road_safety_datapipe]
 ```
 
 ### Fetch the Data
