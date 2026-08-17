@@ -23,7 +23,6 @@ Our mission? Turn messy, multi-million-rows of data into a machine learning pipe
 │   ├── raw/
 │   └── processed/
 ├── notebooks/
-│   ├── eda_notebooks/
 │   │   ├── eda_initials_1.ipynb
 │   │   ├── eda_initials_2.ipynb
 │   │   ├── eda_initials_3.ipynb
