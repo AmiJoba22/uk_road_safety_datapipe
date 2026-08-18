@@ -8,10 +8,10 @@ Our mission? Turn messy, multi-million-rows of data into a machine learning pipe
 
 ## Our Team
 
-- **[Amina Jobarteh]** — _Data Scientist_
-- **[Ye(Morris) Ou ]** — _Data Scientist_
-- **[Oluwafikunayomi Adeniji]** — _Data Scientist_
-- **[Leomary Rodriguez]** — _Data Scientist_
+- **Amina Jobarteh** — _Data Scientist_
+- **Ye(Morris) Ou** — _Data Scientist_
+- **Oluwafikunayomi Adeniji** — _Data Scientist_
+- **Leomary Rodriguez** — _Data Scientist_
 
 ---
 
@@ -23,7 +23,6 @@ Our mission? Turn messy, multi-million-rows of data into a machine learning pipe
 │   ├── raw/
 │   └── processed/
 ├── notebooks/
-│   ├── eda_notebooks/
 │   │   ├── eda_initials_1.ipynb
 │   │   ├── eda_initials_2.ipynb
 │   │   ├── eda_initials_3.ipynb
@@ -52,8 +51,8 @@ We split the extensive [UK Road Safety Dataset](https://www.kaggle.com/datasets/
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/[YOUR_ORGS_NAME]/[YOUR_REPO_NAME].git
-cd [YOUR_REPO_NAME]
+git clone https://github.com/AmiJoba22/uk_road_safety_datapipe].git
+cd [uk_road_safety_datapipe]
 ```
 
 ### Fetch the Data
