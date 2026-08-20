@@ -1,0 +1,15 @@
+# Install with:  pip install -r requirements.txt
+# Data setup (the CSVs are not in the repo) is documented in data/README.md
+
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.13
+
+# needed to run the notebooks
+ipykernel>=6.0
+
+# optional but recommended for the team: teaches git how to diff and merge
+# .ipynb files by cell instead of raw JSON. Run once after installing:
+#   nbdime config-git --enable --global
+nbdime>=4.0

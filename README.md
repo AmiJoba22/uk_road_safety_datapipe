@@ -58,3 +58,5 @@ cd [uk_road_safety_datapipe]
 ### Fetch the Data
 
 Download the data directly from [Kaggle](https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles/data), drop the raw files into `data/raw/`, and step through the notebooks sequentially!
+
+The CSVs are too large to commit (GitHub caps files at 100 MB), so they are gitignored and every clone starts empty. See **[`data/README.md`](data/README.md)** for the full one-time setup and the path convention all notebooks use.
