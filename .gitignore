@@ -6,13 +6,18 @@
 # lives in these folders locally but is never committed.
 # Download the raw files from Kaggle:
 # https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles
-data/raw/
-data/preprocessed/
+data/raw/*
+data/preprocessed/*
 *.csv
 
 # keep the folder structure in the repo even though the data isn't
 !data/raw/.gitkeep
 !data/preprocessed/.gitkeep
+
+# ...and the cluster labels from models/unsupervised_clustering.ipynb are the
+# exception: two columns, ~5.6 MB gzipped, so the supervised notebook can just
+# read them after a git pull instead of re-running the clustering
+!data/preprocessed/accident_clusters.csv.gz
 
 # ---------------------------------------------------------------
 # Notebooks
