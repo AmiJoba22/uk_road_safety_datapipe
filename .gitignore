@@ -45,3 +45,4 @@ env/
 Thumbs.db
 .vscode/
 .idea/
+dashboard/screenshots/tableau_morris_part.ipynb
