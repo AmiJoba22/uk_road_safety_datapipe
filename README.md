@@ -6,37 +6,53 @@ Our mission? Turn messy, multi-million-rows of data into a machine learning pipe
 
 ---
 
-## Our Team
+## Our Team & Individual Contributions
 
-- **Amina Jobarteh** — _Data Scientist_
-- **Ye(Morris) Ou** — _Data Scientist_
-- **Oluwafikunayomi Adeniji** — _Data Scientist_
-- **Leomary Rodriguez** — _Data Scientist_
+| Member | Primary responsibility | Where to see it |
+|---|---|---|
+| **Leomary Rodriguez** | Built the cleaning pipeline for both raw files — the hidden-missing-value fix, type parsing and join logic that every other notebook depends on. Led EDA on severity, speed limit, lighting, weather, driver age and time trends. Co-built the unsupervised clustering. Contributed to the Tableau dashboard. Wrote Sections 1, 2, 4, 5, 7 and 8 of the Final Report. | [`notebooks/leomary_eda.ipynb`](notebooks/leomary_eda.ipynb) · [`models/unsupervised_clustering.ipynb`](models/unsupervised_clustering.ipynb) · [`report/final_report.ipynb`](report/final_report.ipynb) |
+| **Oluwafikunayomi Adeniji** | EDA on the severity distribution and how severity varies with speed limit, light conditions and urban vs rural setting. Co-built the unsupervised clustering. Contributed to the Tableau dashboard. | [`notebooks/oluwafikunayomi_eda.ipynb`](notebooks/oluwafikunayomi_eda.ipynb) · [`models/unsupervised_clustering.ipynb`](models/unsupervised_clustering.ipynb) |
+| **Amina Jobarteh** | EDA on day of week, journey purpose, weather conditions and severity over time. Built the supervised model, and wrote the supervised sections of the Final Report. Assembled and finalised the Tableau dashboard. | [`notebooks/amina_ukeda.ipynb`](notebooks/amina_ukeda.ipynb) · [`models/supervised_regression.ipynb`](models/supervised_regression.ipynb) · dashboard |
+| **Ye (Morris) Ou** | EDA on road and vehicle factors — road surface conditions, junction detail, vehicle manoeuvre and vehicle age — and how each relates to accident severity. Contributed to the Tableau dashboard and to the supervised sections of the Final Report. | [`notebooks/morris_eda.ipynb`](notebooks/morris_eda.ipynb) |
+
+All four contributed findings to [`notebooks/main_eda.ipynb`](notebooks/main_eda.ipynb), the collected
+team EDA, and all four contributed views to the Tableau dashboard, which Amina assembled and
+finalised.
 
 ---
 
-## Incoming Repository Structure
+## Repository Structure
 
 ```text
 ├── README.md
+├── requirements.txt
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   ├── README.md                       ← one-time data setup (CSVs are gitignored)
+│   ├── raw/                            ← Accident_Information.csv, Vehicle_Information.csv
+│   └── preprocessed/
+│       ├── accidents_clean.csv
+│       ├── vehicles_clean.csv
+│       └── accident_clusters.csv.gz    ← cluster labels, small enough to commit
 ├── notebooks/
-│   │   ├── eda_initials_1.ipynb
-│   │   ├── eda_initials_2.ipynb
-│   │   ├── eda_initials_3.ipynb
-│   │   └── eda_initials_4.ipynb
-│   ├── eda_summary.ipynb
-│   ├── preprocessing.ipynb
-│   ├── unsupervised.ipynb
-│   └── supervised.ipynb
+│   ├── leomary_eda.ipynb               ← cleaning pipeline + EDA
+│   ├── oluwafikunayomi_eda.ipynb
+│   ├── amina_ukeda.ipynb
+│   ├── morris_eda.ipynb
+│   └── main_eda.ipynb                  ← collected team findings
+├── models/
+│   ├── unsupervised_clustering.ipynb   ← KMeans, five accident profiles
+│   └── supervised_regression.ipynb     ← predicts fatality risk
 ├── dashboard/
-│   ├── uk_safety_dashboard.twbx
-│   └── screenshots/
-└── reports/
-    └── final_report.md
+│   └── screenshots/                    ← Tableau Public dashboard captures
+└── report/
+    ├── final_report.ipynb              ← the full write-up
+    └── figures/                        ← charts used in the report
 ```
+
+**Note on the data.** The raw and cleaned CSVs are ~2.4 GB combined and GitHub caps files at 100 MB,
+so they are gitignored — see [`data/README.md`](data/README.md) for the one-time setup. The only
+data file in the repo is `accident_clusters.csv.gz`, which is small enough to commit so the
+supervised notebook can read it after a `git pull`.
 
 ---
 
