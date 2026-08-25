@@ -1,22 +1,22 @@
-# Mapping and Modeling UK Road Safety
+# UK Road Safety: A Machine Learning Pipeline
 
 We are diving into the official **UK Road Safety Dataset** from the [UK Department for Transport](https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles/data) to uncover hidden patterns behind over a decade of traffic incidents.
 
 Our mission? Turn messy, multi-million-rows of data into a machine learning pipeline and an interactive dashboard that lets stakeholders know exactly how to make British roads safer.
 
-## Intended Stakeholder or Audience
+## Stakeholders
 
 - **Primary Stakeholders:** Department of Transportation planners, road safety engineers, and emergency services dispatch directors in the United Kingdom.
 - **Usage:** Stakeholders can use these risk profiles to intelligently deploy highway patrols, optimize speed limits, and allocate emergency response
 
-## Tools / Technologies Used
+## Tools & Technologies Used
 
 - **Programming Language:** Python
 - **Machine Learning Libraries:** `scikit-learn` (specifically `HistGradientBoostingRegressor`, `RandomForestRegressor`, and `SimpleImputer`)
 - **Data Wrangling:** `pandas` and `numpy`
 - **Data Visualization & Dashboards:** Tableau Public / Tableau Desktop
 
-## High-Level Methodology / Approach
+## High-Level Methodology
 
 - **Data Prep & Join:** Cleaned raw data, turned them into `accidents_clean.csv` and `vehicles_clean.csv`. Each member did exploratory data analysis to understand patterns and trends
   . Created a main EDA file to display unique findings.
