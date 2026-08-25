@@ -4,14 +4,19 @@ We are diving into the official **UK Road Safety Dataset** from the [UK Departme
 
 Our mission? Turn messy, multi-million-rows of data into a machine learning pipeline and an interactive dashboard that lets stakeholders know exactly how to make British roads safer.
 
-### Tools / Technologies Used
+## Intended Stakeholder or Audience
+
+- **Primary Stakeholders:** Department of Transportation planners, road safety engineers, and emergency services dispatch directors in the United Kingdom.
+- **Usage:** Stakeholders can use these risk profiles to intelligently deploy highway patrols, optimize speed limits, and allocate emergency response
+
+## Tools / Technologies Used
 
 - **Programming Language:** Python
 - **Machine Learning Libraries:** `scikit-learn` (specifically `HistGradientBoostingRegressor`, `RandomForestRegressor`, and `SimpleImputer`)
 - **Data Wrangling:** `pandas` and `numpy`
 - **Data Visualization & Dashboards:** Tableau Public / Tableau Desktop
 
-### High-Level Methodology / Approach
+## High-Level Methodology / Approach
 
 - **Data Prep & Join:** Cleaned raw data, turned them into `accidents_clean.csv` and `vehicles_clean.csv`. Each member did exploratory data analysis to understand patterns and trends
   . Created a main EDA file to display unique findings.
@@ -74,26 +79,26 @@ supervised notebook can read it after a `git pull`.
 
 ---
 
-### Key Findings / Results
+## Key Findings / Results
 
 - paste here
 
-### Tableau Dashboard Link & Screenshots
+## Tableau Dashboard Link & Screenshots
 
 - **Live Interactive Visualization:** [View the Live Tableau Dashboard](INSERT_YOUR_TABLEAU_PUBLIC_URL_HERE)
 - _Alternatively, see the screenshot below displaying our final model validation curves mapping actual versus predicted trends:_
 
 ![Model Validation Chart](INSERT_PATH_TO_YOUR_SCREENSHOT_IMG_HERE)
 
-### Recommendations / Implications
+## Recommendations / Implications
 
 - paste here
 
-### Brief Limitations & Next Steps
+## Brief Limitations & Next Steps
 
 - paste here
 
-### Link to Full Final Report
+## Link to Full Final Report
 
 - For an in-depth review of our equations, data cleaning notebooks, and granular evaluation curves, read our complete [Final Project Report Document](INSERT_LINK_TO_YOUR_FINAL_REPORT_PDF_OR_MD_HERE).
 
