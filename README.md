@@ -2,7 +2,7 @@
 
 We are diving into the official **UK Road Safety Dataset** from the [UK Department for Transport](https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles/data) to uncover hidden patterns behind over a decade of traffic incidents.
 
-Our mission? Turn messy, multi-million-rows of data into a machine learning pipeline and an interactive dashboard that lets stakeholders know exactly how to make British roads safer.
+Our mission? Turn messy, multi-million-rows of data into a machine learning pipeline and an interactive dashboard that helps stakeholders identify patterns associated with more severe road accidents and prioritize areas for further safety investigation.
 
 ## Stakeholders
 
@@ -81,7 +81,13 @@ supervised notebook can read it after a `git pull`.
 
 ## Key Findings / Results
 
-- paste here
+- Accident severity was highly imbalanced: approximately **84.7% of accidents were slight, 14.0% were serious, and 1.3% were fatal**.
+- Accident severity varied meaningfully across road conditions. Accidents on **60 mph roads** had one of the highest proportions of serious and fatal outcomes.
+- Lighting conditions were associated with severity. Accidents occurring in **darkness with no lighting** had a fatality rate of approximately **4.39%**, compared with about **1.03% in daylight**.
+- Rural accidents were more severe than urban accidents. Rural accidents had a fatality rate of approximately **2.35%**, compared with **0.71% in urban areas**.
+- KMeans clustering identified **five interpretable accident profiles**: fast rural roads, morning commute, urban afternoon, multi-vehicle collisions, and urban after dark.
+- Fatality rates differed substantially across these profiles, ranging from **0.57% for urban afternoon accidents to 2.65% for fast rural-road accidents**, a roughly **4.6x difference**.
+- The largest cluster, urban afternoon accidents, had the lowest fatality rate, while fast rural-road accidents had the highest. This demonstrates that accident volume and accident severity are not the same thing.
 
 ## Tableau Dashboard Link & Screenshots
 
@@ -92,11 +98,21 @@ supervised notebook can read it after a `git pull`.
 
 ## Recommendations / Implications
 
-- paste here
+- Road-safety interventions should give additional attention to **high-speed rural roads**, which showed the highest fatality rate among the accident profiles identified through clustering.
+- Poorly lit roads should be investigated for potential improvements in **street lighting, visibility, signage, and nighttime safety measures**.
+- Multi-vehicle collision environments may benefit from targeted traffic-management strategies because this profile had the second-highest fatality rate.
+- The five accident profiles can be used as a segmentation lens for future road-safety analysis and should be tested as engineered features in supervised modeling.
+- Stakeholders should interpret fatality rates as the severity of accidents **after a crash has occurred**, rather than as the probability that a crash will occur under those conditions.
 
 ## Brief Limitations & Next Steps
 
-- paste here
+
+- The dataset contains only recorded accidents, not journeys where no accident occurred. Therefore, the analysis measures how severe crashes were under different conditions, not the probability of crashing in those conditions.
+- Approximately **2.7% of records** were removed from the clustering analysis because they were missing one or more selected features. These missing records may not be random.
+- KMeans is designed primarily for continuous, roughly spherical clusters. Because seven of the ten clustering features were categorical and required one-hot encoding, the resulting clusters showed some overlap.
+- The number of clusters was selected using both statistical metrics and interpretability. Although `k=2` had the highest silhouette score, `k=5` produced more useful and distinguishable accident profiles.
+- A future analysis could compare KMeans with methods designed for mixed numerical and categorical data, such as **K-Prototypes**.
+- Future supervised modeling should continue testing whether the engineered cluster feature improves performance compared with models using the original features alone.
 
 ## Link to Full Final Report
 
@@ -107,8 +123,9 @@ supervised notebook can read it after a `git pull`.
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/AmiJoba22/uk_road_safety_datapipe].git
-cd [uk_road_safety_datapipe]
+
+git clone https://github.com/AmiJoba22/uk_road_safety_datapipe.git
+cd uk_road_safety_datapipe
 ```
 
 ### Fetch the Data
