@@ -139,6 +139,11 @@ For an in-depth review of our preprocessing decisions, modelling choices, full r
 
 ## Data Source: Quick Start Guide
 
+The data is the UK Department for Transport's road safety collection, published on
+[Kaggle](https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles). It covers
+**2,047,256 accidents recorded across Great Britain between 2005 and 2017**, together with
+2,177,205 vehicle records (2004–2016), in two files joined on `Accident_Index`.
+
 ### Clone the Repo
 
 ```bash
