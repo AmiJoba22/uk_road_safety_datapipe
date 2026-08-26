@@ -95,10 +95,16 @@ supervised notebook can read it after a `git pull`.
 
 ## Tableau Dashboard Link & Screenshots
 
-- **Live Interactive Visualization:** [View the Live Tableau Dashboard](INSERT_YOUR_TABLEAU_PUBLIC_URL_HERE)
-- _Alternatively, see the screenshot below displaying our final model validation curves mapping actual versus predicted trends:_
+**[View the live interactive dashboard on Tableau Public →](https://public.tableau.com/app/profile/amina.jobarteh/viz/UKRoadSafety_17877843524320/Findings)**
 
-![Model Validation Chart](INSERT_PATH_TO_YOUR_SCREENSHOT_IMG_HERE)
+The dashboard is built as a three-part story: exploratory findings, the unsupervised accident
+profiles, and the supervised model results.
+
+![Dashboard — exploratory data analysis](dashboard/screenshots/story_eda.png)
+
+![Dashboard — unsupervised accident profiles](dashboard/screenshots/story_unsupervised.png)
+
+![Dashboard — supervised model results](dashboard/screenshots/story_supervised.png)
 
 ## Recommendations / Implications
 
@@ -129,7 +135,7 @@ supervised notebook can read it after a `git pull`.
 
 ## Link to Full Final Report
 
-- For an in-depth review of our equations, data cleaning notebooks, and granular evaluation curves, read our complete [Final Project Report Document](INSERT_LINK_TO_YOUR_FINAL_REPORT_PDF_OR_MD_HERE).
+For an in-depth review of our preprocessing decisions, modelling choices, full results and limitations, read the complete **[Final Report](report/final_report.ipynb)**.
 
 ## Data Source: Quick Start Guide
 
