@@ -88,6 +88,10 @@ supervised notebook can read it after a `git pull`.
 - KMeans clustering identified **five interpretable accident profiles**: fast rural roads, morning commute, urban afternoon, multi-vehicle collisions, and urban after dark.
 - Fatality rates differed substantially across these profiles, ranging from **0.57% for urban afternoon accidents to 2.65% for fast rural-road accidents**, a roughly **4.6x difference**.
 - The largest cluster, urban afternoon accidents, had the lowest fatality rate, while fast rural-road accidents had the highest. This demonstrates that accident volume and accident severity are not the same thing.
+- The regression model's (HistGradientBoosting & Random Forest) predicted risk percentages land close to the actual fatality rates for every single cluster.
+- Both regression model's correctly identified cluster 2 as the safest profile, and cluster 0 as the most fatal profile.
+- Both regression models performed well in terms of average error. The HistGradientBoosting model made mistakes in overall risk by an average of just 2.50% (MAE = 0.02500), slightly beating out the RandomForest model's 2.51%.
+- HistGradient Regressor model had the higher predictive power as the model achieved an \(R^{2}\) score of 0.01551, which is roughly 5 times higher than the RandomForest score of 0.00308.
 
 ## Tableau Dashboard Link & Screenshots
 
@@ -103,9 +107,10 @@ supervised notebook can read it after a `git pull`.
 - Multi-vehicle collision environments may benefit from targeted traffic-management strategies because this profile had the second-highest fatality rate.
 - The five accident profiles can be used as a segmentation lens for future road-safety analysis and should be tested as engineered features in supervised modeling.
 - Stakeholders should interpret fatality rates as the severity of accidents **after a crash has occurred**, rather than as the probability that a crash will occur under those conditions.
+- Stakeholders could possibly reduce speed limit on fast rural roads, or increase in vehichle awareness when using fast rural roads.
+- Regression and classification models should undergo multiple approcahes before deciding which one's should go into production.
 
 ## Brief Limitations & Next Steps
-
 
 - The dataset contains only recorded accidents, not journeys where no accident occurred. Therefore, the analysis measures how severe crashes were under different conditions, not the probability of crashing in those conditions.
 - Approximately **2.7% of records** were removed from the clustering analysis because they were missing one or more selected features. These missing records may not be random.
@@ -113,6 +118,14 @@ supervised notebook can read it after a `git pull`.
 - The number of clusters was selected using both statistical metrics and interpretability. Although `k=2` had the highest silhouette score, `k=5` produced more useful and distinguishable accident profiles.
 - A future analysis could compare KMeans with methods designed for mixed numerical and categorical data, such as **K-Prototypes**.
 - Future supervised modeling should continue testing whether the engineered cluster feature improves performance compared with models using the original features alone.
+- For Supervised Model (Regression) Limitations:
+- **Extreme Real-World Chaos:** Low R² scores prove car crashes are highly unpredictable. The model estimates general group risk but cannot predict individual luck.
+
+- **Imputed Data Bias:** Random Forest requires filling missing data. Using column medians adds artificial values, which introduces slight guessing bias.
+
+- **Severe Class Imbalance:** Fatal accidents are rare events. The model has few examples to study, making individual spikes hard to catch.
+
+- **Missing Environmental Context:** The dataset lacks real-time variables like bad weather, driver distraction, and holiday traffic surges.
 
 ## Link to Full Final Report
 
